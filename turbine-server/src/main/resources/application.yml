@@ -1,0 +1,17 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: turbine-server
+
+turbine:
+  aggregator:
+    cluster-config: default
+  cluster-name-expression: "'default'"
+  app-config: user-server,order-server
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
